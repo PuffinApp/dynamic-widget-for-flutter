@@ -1,0 +1,21 @@
+{
+    "name": "agostino/dynamic-widget-for-flutter",
+    "description": "A set of PHP classes to let you manage your Dynamic Widget UI programmatically",
+    "type": "library",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "agostinofiscale\\DynamicWidgetForFlutter\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Agostino Fiscale",
+            "email": "agostinofiscale@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}
