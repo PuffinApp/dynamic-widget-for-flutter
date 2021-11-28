@@ -1,5 +1,5 @@
 {
-    "name": "agostino/dynamic-widget-for-flutter",
+    "name": "agostinofiscale/dynamic-widget-for-flutter",
     "description": "A set of PHP classes to let you manage your Dynamic Widget UI programmatically",
     "type": "library",
     "minimum-stability": "stable",
