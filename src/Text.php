@@ -2,28 +2,109 @@
 
 namespace agostinofiscale\DynamicWidgetForFlutter;
 
+/**
+ * Text
+ * 
+ * Text class is based on TextWidgetParser class from Dynamic Widget.
+ */
 class Text extends Widget {
 
     public $type = "Text";
+    
+    /**
+     * The text to display	
+     *
+     * @var string
+     */
+    public $data;   
 
-    public $data;
+    /**
+     * How the text should be aligned horizontally.
+     * 
+     * You can use TextAlign class as enumerator.
+     *
+     * @var string
+     */
     public $textAlign;
+        
+    /**
+     * How visual overflow should be handled.
+     * 
+     * You can use TextOverflow class as enumerator.
+     *
+     * @var mixed
+     */
     public $overflow;
+        
+    /**
+     * An optional maximum number of lines for the text to span, wrapping if necessary. If the text exceeds the given number of lines, it will be truncated according to overflow.
+     *
+     * @var int
+     */
     public $maxLines;
+    
+    /**
+     * An alternative semantics label for this text.	
+     *
+     * @var string
+     */
     public $semanticsLabel;
+        
+    /**
+     * Whether the text should break at soft line breaks.
+     *
+     * @var bool
+     */
     public $softWrap;
+        
+    /**
+     * The directionality of the text.
+     * 
+     * You can use TextDirection as enumarator.
+     *
+     * @var mixed
+     */
     public $textDirection;
+        
+    /**
+     * The style of the text.
+     * 
+     * You can use TextStyle class.
+     *
+     * @var mixed
+     */
     public $style;
+        
+    /**
+     * The number of font pixels for each logical pixel.
+     *
+     * @var float
+     */
     public $textScaleFactor;
-
+        
+    /**
+     * Create a Text widget instance.
+     * 
+     * @param string $data The text to display
+     * @param ?string $textAlign How the text should be aligned horizontally.
+     * @param ?string $overflow How visual overflow should be handled.
+     * @param ?int $maxLines An optional maximum number of lines for the text to span, wrapping if necessary. If the text exceeds the given number of lines, it will be truncated according to overflow.
+     * @param ?string $semanticsLabel An alternative semantics label for this text.	 
+     * @param ?bool $softWrap Whether the text should break at soft line breaks.
+     * @param ?string $textDirection The directionality of the text.
+     * @param ?TextStyle $style The style of the text.
+     * @param ?float $textScaleFactor The number of font pixels for each logical pixel.
+     *
+     * @return Text
+     */
     public function __construct(
         string $data,
-        string $textAlign = TextAlign::start, 
-        string $overflow = TextOverflow::ellipsis,
+        string $textAlign = null, 
+        string $overflow = null,
         int $maxLines = null,
         string $semanticsLabel = null,
         bool $softWrap = null,
-        string $textDirection = TextDirection::ltr,
+        string $textDirection = null,
         TextStyle $style = null,
         float $textScaleFactor = null
     ) {
@@ -51,7 +132,7 @@ class Text extends Widget {
      *
      * @return  self
      */ 
-    public function setText($data)
+    public function setText(string $data)
     {
         $this->data = $data;
 
@@ -68,10 +149,10 @@ class Text extends Widget {
 
     /**
      * Set the value of textAlign
-     *
+     *      
      * @return  self
      */ 
-    public function setTextAlign($textAlign)
+    public function setTextAlign(string $textAlign)
     {
         $this->textAlign = $textAlign;
 
@@ -88,10 +169,10 @@ class Text extends Widget {
 
     /**
      * Set the value of maxLines
-     *
+     *      
      * @return  self
      */ 
-    public function setMaxLines($maxLines)
+    public function setMaxLines(int $maxLines)
     {
         $this->maxLines = $maxLines;
 
@@ -111,7 +192,7 @@ class Text extends Widget {
      *
      * @return  self
      */ 
-    public function setSemanticsLabel($semanticsLabel)
+    public function setSemanticsLabel(string $semanticsLabel)
     {
         $this->semanticsLabel = $semanticsLabel;
 
@@ -171,7 +252,7 @@ class Text extends Widget {
      *
      * @return  self
      */ 
-    public function setStyle($style)
+    public function setStyle(TextStyle $style)
     {
         $this->style = $style;
 
