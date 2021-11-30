@@ -13,6 +13,7 @@ Why not? Developing my application I found really interesting [dengyin2000](http
 - [ ] Container
 - [x] Text
 - [ ] TextSpan
+- [x] TextStyle
 - [ ] RaisedButton
 - [ ] ElevatedButton
 - [ ] TextButton
@@ -41,6 +42,7 @@ Why not? Developing my application I found really interesting [dengyin2000](http
 - [ ] Wrap
 - [ ] ClipRRect
 - [ ] SafeArea
+- [x] ListTile
 - [ ] SelectableText
 - [ ] Icon
 - [ ] DropCapText
