@@ -15,11 +15,11 @@ final class ListTileTest extends TestCase
 
         $list_tile_widget = new ListTile();
 
-        $this->assertSame($empty_list_tile_from_flutter, json_encode($list_tile_widget));
+        $this->assertJsonStringEqualsJsonString($empty_list_tile_from_flutter, json_encode($list_tile_widget));
 
         $text_widget = new Text("Hello world!");
         $list_tile_widget->setTitle($text_widget);
 
-        $this->assertSame($list_tile_with_text_as_title_from_flutter, json_encode($list_tile_widget));
+        $this->assertJsonStringEqualsJsonString($list_tile_with_text_as_title_from_flutter, json_encode($list_tile_widget));
     }
 }

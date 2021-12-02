@@ -12,10 +12,8 @@ final class TextTest extends TestCase
     {
         $text_from_flutter = '{"type":"Text","data":"Hello world!","textAlign":"start","overflow":"ellipsis","maxLines":null,"semanticsLabel":null,"softWrap":null,"textDirection":"ltr","style":null,"textScaleFactor":null}';
 
-        $text_widget = new Text(
-            "Hello world!",
-        );
+        $text_widget = new Text("Hello world!");
 
-        $this->assertSame($text_from_flutter, json_encode($text_widget));
+        $this->assertJsonStringEqualsJsonString($text_from_flutter, json_encode($text_widget));
     }
 }
