@@ -160,6 +160,26 @@ class Text extends Widget {
     }
 
     /**
+     * Get the value of overflow
+     */ 
+    public function getOverflow()
+    {
+        return $this->overflow;
+    }
+
+    /**
+     * Set the value of overflow
+     *
+     * @return  self
+     */ 
+    public function setOverflow($overflow)
+    {
+        $this->overflow = $overflow;
+
+        return $this;
+    }
+
+    /**
      * Get the value of maxLines
      */ 
     public function getMaxLines()

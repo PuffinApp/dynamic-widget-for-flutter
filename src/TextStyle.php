@@ -22,7 +22,7 @@ class TextStyle extends Widget {
         string $fontWeight = "normal"
     )
     {
-       $this->color = dechex($color);
+       $this->color = !is_null($color) ? dechex($color) : null;
        $this->debugLabel = $debugLabel;
        $this->decoration = $decoration ?? "none";
        $this->fontSize = $fontSize;
